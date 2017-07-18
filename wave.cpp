@@ -71,11 +71,11 @@ void wave::drawWave() {
 	}
 }
 
-void wave::dropObject(int x) {
+void wave::dropObject(int x, int y) {
 	float width = (float)windowW / (springNum - 1);
 	for (int i = 0; i < windowW; i++) {
 		if (x < width * i) {
-			springs[i].velocity_ += addVelocity;
+			springs[i].velocity_ += addVelocity + (windowH - y)/5;
 			break;
 		}
 	}

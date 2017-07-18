@@ -28,7 +28,7 @@ public:
 	void initWave();
 	void updateWave();
 	void drawWave();
-	void dropObject(int x);
+	void dropObject(int x, int y);
 
 };
 

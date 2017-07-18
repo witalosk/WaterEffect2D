@@ -50,7 +50,7 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-	objWave.dropObject(x);
+	objWave.dropObject(x, y);
 }
 
 //--------------------------------------------------------------
