@@ -1,9 +1,9 @@
 #pragma once
 
 #include "ofMain.h"
-#include "spring.h"
+#include "wave.h"
 
-#define springNum 201
+
 
 class ofApp : public ofBaseApp{
 
@@ -23,18 +23,11 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-    
-        int windowW = 1200;
-        int windowH = 800;
-    
-        spring springs[springNum];
-    
-        float spread = 0.05f;
 
-        float addVelocity = 200.0f;
-    
-        float leftDeltas[springNum];
-        float rightDeltas[springNum];
-    
+		int windowW = 1200;
+		int windowH = 800;
+		wave objWave;
+
+       
 };
 

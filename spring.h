@@ -1,5 +1,5 @@
 //
-//  spring.hpp
+//  spring.h
 //  waterEffect2D
 //
 //  Created by Kousuke on 2017/07/17.
