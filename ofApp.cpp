@@ -3,10 +3,9 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     
-    ofSetWindowShape(windowW, windowH);
     ofSetWindowPosition(10, 10);
 
-	objWave.initWave();
+	objWave.init();
 
     ofEnableAlphaBlending();
 
@@ -14,7 +13,9 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	objWave.updateWave();
+    
+	objWave.update();
+    
 }
 
 //--------------------------------------------------------------
@@ -25,7 +26,8 @@ void ofApp::draw(){
     
     ofBackgroundGradient(startColor, endColor, OF_GRADIENT_LINEAR);
     
-	objWave.drawWave();
+	objWave.draw();
+    
 }
 
 //--------------------------------------------------------------
@@ -50,11 +52,15 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-	objWave.dropObject(x, y);
+    
+    mouseStartX = x;
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
+    
+    objWave.dropObject(mouseStartX, x, y);
 
 }
 

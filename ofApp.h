@@ -3,7 +3,8 @@
 #include "ofMain.h"
 #include "wave.h"
 
-
+#define windowW 1200
+#define windowH 800
 
 class ofApp : public ofBaseApp{
 
@@ -24,10 +25,9 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-		int windowW = 1200;
-		int windowH = 800;
 		wave objWave;
+    
+        int mouseStartX;
 
-       
 };
 

@@ -18,17 +18,15 @@ class wave {
 private:
 	spring springs[springNum];
 	constexpr static const float spread = 0.05f;
-	constexpr static const float addVelocity = 200.0f;
+	constexpr static const float addVelocity = 50.0f;
 	float leftDeltas[springNum];
 	float rightDeltas[springNum];
-	constexpr static const int windowW = 1200;
-	constexpr static const int windowH = 800;
 
 public:
-	void initWave();
-	void updateWave();
-	void drawWave();
-	void dropObject(int x, int y);
+	void init();
+	void update();
+	void draw();
+	void dropObject(int startX, int endX, int y);
 
 };
 
